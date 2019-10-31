@@ -26,22 +26,33 @@ var questions = [
 var counter = 0;
 var timeLeft = 75;
 
-function setUp(){
-  //test to make sure text changes in html. but nothing is changing
-  document.getElementById("#timer").innerHTML = "Test text";
-  var timer = Select("timer");
-  timer.html("test");
-  timer.html(timeLeft - counter);
-  timeIt()
+function setUpTime(){
+  var timerInterval = setInterval(function() {
+    timeLeft--;
+    timerElement.textContent = timeLeft + " Second Left";
 
-  function timeIt(){
-    counter++;
-    timer.html(timeLeft - counter);
+    if(timeLeft === 0) {
+      clearInterval(timerInterval);
+      alert("timer over");
+    }
 
-    setInterval(timeIt, 1000)
-  }
+  }, 1000);
 }
 
+
+ //test to make sure text changes in html. but nothing is changing
+  // document.getElementById("#timer").innerHTML = "Test text";
+  // var timer = Select("timer");
+  // timer.html("test");
+  // timer.html(timeLeft - counter);
+  // timeIt()
+
+  // function timeIt(){
+  //   counter++;
+  //   timer.html(timeLeft - counter);
+
+  //   setInterval(timeIt, 1000)
+  // } 
 
 //start function will start the quiz. before button is pressed all the answer options will be hidden
 //after it is pressed the options appear and the welcome disappears.
@@ -53,6 +64,7 @@ function start() {
         
         startButton.style.display = "none"; //start button dissapears after clicked
         showQuestion();
+        setUpTime();
     } 
   }
 
