@@ -36,8 +36,27 @@ function start() {
 
 function showQuestion(){
     questionElement.innerHTML = questions[0].title;
+
+//    answerButtonsElement.innerText = 
+
+    for(var i =0; i < questions[0].choices.length; i++){
+      document.getElementById("answer-buttons").innerHTML += "<button>" + questions[0].choices.length + "</button>";
+    }
+   // answerButtonsElement.innerText = questions[0].choices
+   // answerButtonsElement.setTe = questions[0].choices;
+
     //questions.push(title); //
 }
+
+// var never = [1,2,3,4,7];
+
+// function please () {
+//   for (var i = 0; i < never.length; i++) {
+//     document.getElementById("more").innerHTML += "<button>" + never[i] + "</button>";
+//   }
+// }
+
+
 
 //   function showQuestion(questionElement) {
 //     questionElement.innerText = questions.title
