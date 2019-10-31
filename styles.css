@@ -21,10 +21,12 @@
     align-content: center;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 3%;
 }
 
 .timer-container{
-    margin-left: 75%;
+    float: right;    
+    margin-right: 30%;
 }
 
 /* .hide{
