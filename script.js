@@ -4,6 +4,8 @@ var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-buttons')
 var beforeStartElement = document.getElementById('beforeStart');
+var timerElement = document.getElementById('timer');
+
 
 
 var questions = [
@@ -19,6 +21,26 @@ var questions = [
   // },
   ///etc.
 ];
+
+//Countdown timer
+var counter = 0;
+var timeLeft = 75;
+
+function setUp(){
+  //test to make sure text changes in html. but nothing is changing
+  document.getElementById("#timer").innerHTML = "Test text";
+  var timer = Select("timer");
+  timer.html("test");
+  timer.html(timeLeft - counter);
+  timeIt()
+
+  function timeIt(){
+    counter++;
+    timer.html(timeLeft - counter);
+
+    setInterval(timeIt, 1000)
+  }
+}
 
 
 //start function will start the quiz. before button is pressed all the answer options will be hidden
@@ -188,3 +210,6 @@ function showQuestion(){
 //choose right logic for points
 //else if 
 //increase counter
+
+
+
