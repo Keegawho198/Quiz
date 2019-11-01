@@ -3,7 +3,7 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-buttons')
-//var btnElement = document.getElementsByClassName('.btn');
+var btnElement = document.getElementsByClassName('.btn');
 
 var beforeStartElement = document.getElementById('beforeStart');
 var timerElement = document.getElementById('timer');
@@ -65,8 +65,8 @@ function showQuestion(){
          button.innerHTML = questions[0].choices;
 
     // 2. Append somewhere
-    var body = document.getElementsByTagName("body")[0];
-    body.appendChild(button);
+    var btnElement = document.getElementsByTagName("btn");
+    btnElement.appendChild(button);
 
     }
 
