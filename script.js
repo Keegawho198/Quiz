@@ -3,6 +3,8 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-buttons')
+//var btnElement = document.getElementsByClassName('.btn');
+
 var beforeStartElement = document.getElementById('beforeStart');
 var timerElement = document.getElementById('timer');
 
@@ -55,7 +57,19 @@ function start() {
 
 function showQuestion(){
     questionElement.innerHTML = questions[0].title;
+    
     answerButtonsElement.innerText = questions[0].choices;
+
+      for(i = 0; i < questions[0].choices; ){ //loop all the answers for each button
+        var button = document.createElement("button");
+         button.innerHTML = questions[0].choices;
+
+    // 2. Append somewhere
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(button);
+
+    }
+
 
    // document.getElementById("btn").innerText = questions[0].choices;
 
