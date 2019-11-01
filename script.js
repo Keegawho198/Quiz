@@ -39,21 +39,6 @@ function setUpTime(){
   }, 1000);
 }
 
-
- //test to make sure text changes in html. but nothing is changing
-  // document.getElementById("#timer").innerHTML = "Test text";
-  // var timer = Select("timer");
-  // timer.html("test");
-  // timer.html(timeLeft - counter);
-  // timeIt()
-
-  // function timeIt(){
-  //   counter++;
-  //   timer.html(timeLeft - counter);
-
-  //   setInterval(timeIt, 1000)
-  // } 
-
 //start function will start the quiz. before button is pressed all the answer options will be hidden
 //after it is pressed the options appear and the welcome disappears.
 function start() {
@@ -70,12 +55,21 @@ function start() {
 
 function showQuestion(){
     questionElement.innerHTML = questions[0].title;
+    answerButtonsElement.innerText = questions[0].choices;
 
+   // document.getElementById("btn").innerText = questions[0].choices;
+
+
+   // var answerButtonsElement = document.createElement("button");
+
+
+    
 //    answerButtonsElement.innerText = 
 
-    for(var i =0; i < questions[0].choices.length; i++){
-      document.getElementById("answer-buttons").innerHTML += "<button>" + questions[0].choices.length + "</button>";
-    }
+    // for(var i =0; i < questions[0].choices; i++){
+    //   
+    //  // document.getElementById("answer-buttons").innerHTML += "<button>" + questions[0].choices.length + "</button>";
+    // }
    // answerButtonsElement.innerText = questions[0].choices
    // answerButtonsElement.setTe = questions[0].choices;
 
