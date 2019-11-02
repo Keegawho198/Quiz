@@ -14,12 +14,12 @@ var questions = [
   {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: 2 //instead of "alerts", made it into the number of the index
+    answer: "alerts"
   },
    {
      title: "The condition in an if / else statement is enclosed within ____.",
      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-     answer: 2
+     answer: "parentheses"
    },
   ///etc.
 ];
@@ -55,28 +55,57 @@ function start() {
     } 
   }
 
+var currentQuestionIndex = 0;
+
 function showQuestion(){
-    questionElement.innerHTML = questions[0].title;
-    btn1.innerHTML = questions[0].choices[0];
-    btn2.innerHTML = questions[0].choices[1];
-    btn3.innerHTML = questions[0].choices[2];
-    btn4.innerHTML = questions[0].choices[3];
+    questionElement.innerHTML = questions[currentQuestionIndex].title;
+    btn1.innerHTML = questions[currentQuestionIndex].choices[0];
+    btn2.innerHTML = questions[currentQuestionIndex].choices[1];
+    btn3.innerHTML = questions[currentQuestionIndex].choices[2];
+    btn4.innerHTML = questions[currentQuestionIndex].choices[3];
+
+
     }
 
 
-function checkQuestion(correct){
-  if(correct != questions[0].answer){
+function checkAnswer(){
+  console.log(event.target.innerHTML);
+ // console.log(questions[0].answer);
+  if(event.target.innerHTML != questions[0].answer){
     alert("Wrong");
-     timerElement = timeLeft - 10;
-  }else if(correct == questions[0].answer) {
+    currentQuestionIndex++;
+    showQuestion();
+    //nextQuestion();
+    // timerElement.textContent = timeLeft - 10;
+    timeLeft = timeLeft - 10;
+    // timerInterval = timeLeft - 10;
+  }else if(event.target.innerHTML == questions[0].answer) {
     alert("right");
+    currentQuestionIndex++;
+    showQuestion();
+    //nextQuestion();
   }
 }
 
 
+
+// function nextQuestion(){
+//   for(var i = 0; i > questions[currentQuestion]; i++){
+//     currentQuestion = questions[i].title;
+//    // console.log(currentQuestion);
+//     currentQuestion = questions[0].choices;
+//    // console.log(currentQuestion);
+//     currentQuestion++;
+//     console.log(currentQuestion);
+//   }
+ 
+
+// }
+
+
     // for(var i =0; i < questions[0].choices; i++){
     //   
-    //  // document.getElementById("answer-buttons").innerHTML += "<button>" + questions[0].choices.length + "</button>";
+    //  // document.getElementById("answer-buttons").innerHTML += "<button >" + questions[0].choices[i] + "</button>";
     // }
    // answerButtonsElement.innerText = questions[0].choices
    // answerButtonsElement.setTe = questions[0].choices;
