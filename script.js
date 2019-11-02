@@ -3,7 +3,7 @@ var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 var questionElement = document.getElementById('question')
 var answerButtonsElement = document.getElementById('answer-buttons')
-var btnElement = document.getElementsByClassName('.btn');
+//var btnElement = document.getElementsByClassName('btn');
 
 var beforeStartElement = document.getElementById('beforeStart');
 var timerElement = document.getElementById('timer');
@@ -14,13 +14,13 @@ var questions = [
   {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts"
-  }//,
-  // {
-  //   title: "The condition in an if / else statement is enclosed within ____.",
-  //   choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-  //   answer: "parentheses"
-  // },
+    answer: 2 //instead of "alerts", made it into the number of the index
+  },
+   {
+     title: "The condition in an if / else statement is enclosed within ____.",
+     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+     answer: 2
+   },
   ///etc.
 ];
 
@@ -57,28 +57,22 @@ function start() {
 
 function showQuestion(){
     questionElement.innerHTML = questions[0].title;
-    
-    answerButtonsElement.innerText = questions[0].choices;
-
-      for(i = 0; i < questions[0].choices; ){ //loop all the answers for each button
-        var button = document.createElement("button");
-         button.innerHTML = questions[0].choices;
-
-    // 2. Append somewhere
-    var btnElement = document.getElementsByTagName("btn");
-    btnElement.appendChild(button);
-
+    btn1.innerHTML = questions[0].choices[0];
+    btn2.innerHTML = questions[0].choices[1];
+    btn3.innerHTML = questions[0].choices[2];
+    btn4.innerHTML = questions[0].choices[3];
     }
 
 
-   // document.getElementById("btn").innerText = questions[0].choices;
+function checkQuestion(correct){
+  if(correct != questions[0].answer){
+    alert("Wrong");
+     timerElement = timeLeft - 10;
+  }else if(correct == questions[0].answer) {
+    alert("right");
+  }
+}
 
-
-   // var answerButtonsElement = document.createElement("button");
-
-
-    
-//    answerButtonsElement.innerText = 
 
     // for(var i =0; i < questions[0].choices; i++){
     //   
@@ -88,7 +82,7 @@ function showQuestion(){
    // answerButtonsElement.setTe = questions[0].choices;
 
     //questions.push(title); //
-}
+
 
 // var never = [1,2,3,4,7];
 
