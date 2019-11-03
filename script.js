@@ -66,7 +66,6 @@ function start() {
         startButton.style.display = "none"; //start button dissapears after clicked
         showQuestion();
         setUpTime();
-        quizEnd();
     } 
   }
 
@@ -90,18 +89,20 @@ function checkAnswer(){
     alert("Wrong");
     currentQuestionIndex++;
     showQuestion();
+    quizEnd();
     timeLeft = timeLeft - 10;
   }else if(event.target.innerHTML == questions[currentQuestionIndex].answer) {
     alert("right");
     currentQuestionIndex++;
     showQuestion();
+    //quizEnd();
   }
 }
 
 // //trying to create a end quiz message
 // function quizEnd(){
-//   for(i = 0; i < currentQuestionIndex; i++){
-//     if(i=4){
+//   for(currentQuestionIndex = 0; currentQuestionIndex <4; ){
+//     if(currentQuestionIndex = 4){
 //           alert("Quiz done");
 //     }
 //   }
