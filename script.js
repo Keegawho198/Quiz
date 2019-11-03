@@ -7,6 +7,7 @@ var answerButtonsElement = document.getElementById('answer-buttons')
 
 var beforeStartElement = document.getElementById('beforeStart');
 var timerElement = document.getElementById('timer');
+var scoreTracker = document.getElementById('score');
 
 
 
@@ -39,7 +40,7 @@ var questions = [
 ];
 
 //Countdown timer
-var counter = 0;
+//var counter = 0;
 var timeLeft = 75;
 
 function setUpTime(){
@@ -66,6 +67,7 @@ function start() {
         startButton.style.display = "none"; //start button dissapears after clicked
         showQuestion();
         setUpTime();
+        keepScore();
     } 
   }
 
@@ -81,6 +83,7 @@ function showQuestion(){
 
     }
 
+    var score = 0;
 
 function checkAnswer(){
   console.log(event.target.innerHTML);
@@ -94,21 +97,18 @@ function checkAnswer(){
   }else if(event.target.innerHTML == questions[currentQuestionIndex].answer) {
     alert("right");
     currentQuestionIndex++;
+    score++;
+    keepScore();
     showQuestion();
     //quizEnd();
   }
 }
 
-// //trying to create a end quiz message
-// function quizEnd(){
-//   for(currentQuestionIndex = 0; currentQuestionIndex <4; ){
-//     if(currentQuestionIndex = 4){
-//           alert("Quiz done");
-//     }
-//   }
+function keepScore(){
+  scoreTracker.textContent = "Score = " + score;
+}
 
-  
-// }
+
 
 
 
