@@ -30,7 +30,7 @@ var questions = [
      title: "What is the use of document.getElementById().value in javascript?",
      choices: ["To take value from a textbox", "To input some value into Javascript", "To take value from any form tool", "None of the above"],
      answer: "To take value from any form tool"
-   }
+   },
    {
      title: "My favourite color is _____ .",
      choices: ["Blue", "Yellow", "Red", "Purple"],
