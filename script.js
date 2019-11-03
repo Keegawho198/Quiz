@@ -36,7 +36,6 @@ var questions = [
      choices: ["Blue", "Yellow", "Red", "Purple"],
      answer: "Yellow"
    }
-  ///etc.
 ];
 
 //Countdown timer
@@ -67,6 +66,7 @@ function start() {
         startButton.style.display = "none"; //start button dissapears after clicked
         showQuestion();
         setUpTime();
+        quizEnd();
     } 
   }
 
@@ -98,172 +98,17 @@ function checkAnswer(){
   }
 }
 
-
-
-// function nextQuestion(){
-//   for(var i = 0; i > questions[currentQuestion]; i++){
-//     currentQuestion = questions[i].title;
-//    // console.log(currentQuestion);
-//     currentQuestion = questions[0].choices;
-//    // console.log(currentQuestion);
-//     currentQuestion++;
-//     console.log(currentQuestion);
+// //trying to create a end quiz message
+// function quizEnd(){
+//   for(i = 0; i < currentQuestionIndex; i++){
+//     if(i=4){
+//           alert("Quiz done");
+//     }
 //   }
- 
-
-// }
-
-
-    // for(var i =0; i < questions[0].choices; i++){
-    //   
-    //  // document.getElementById("answer-buttons").innerHTML += "<button >" + questions[0].choices[i] + "</button>";
-    // }
-   // answerButtonsElement.innerText = questions[0].choices
-   // answerButtonsElement.setTe = questions[0].choices;
-
-    //questions.push(title); //
-
-
-// var never = [1,2,3,4,7];
-
-// function please () {
-//   for (var i = 0; i < never.length; i++) {
-//     document.getElementById("more").innerHTML += "<button>" + never[i] + "</button>";
-//   }
-// }
-
-
-
-//   function showQuestion(questionElement) {
-//     questionElement.innerText = questions.title
-//     //questions.choices.forEach(answer => {
-//     //  const button = document.createElement('button')
-//       button.innerText = answer.text
-//       button.classList.add('btn')
-      
-//       button.addEventListener('click', selectAnswer)
-//       answerButtonsElement.appendChild(button)
-//     })
-//   }
-
 
   
-
-
-
-
-
-// var firstName = "firstName";
-// var lastname = "lastname";
-// var age = 21
-// var canVote= true;
-// var likes = ["movies", "books", "TV"]
-
-
-
-
-// var child2 = {
-//   firstName: "firstname",
-//   lastName: "lastName",
-//   age: 21,
-//   canVote= true,
-//   likes = ["movies", "books", "TV"]
 // }
 
-// var child1 = {
-//   firstName: "firstname",
-//   lastName: "lastName",
-//   age: 21,
-//   canVote= true,
-//   likes = ["movies", "books", "TV"]
-// }
-
-// var person1 = {
-//   firstName: "firstname",
-//   lastName: "lastName",
-//   age: 21,
-//   canVote= true,
-//   likes = ["movies", "books", "TV"],
-//   children : [
-//     {
-//     firstName: "firstname",
-//     lastName: "lastName",
-//     age: 21,
-//     canVote:true,
-//     likes: ["movies", "books", "TV"]
-//     },
-//     child2
-//   ]
-// }
-
-// [
-//   {
-//     [],
-//     {[{}]}
-//   },
-//   {}
-// ]
-
-
-
-// person1.children[0].likes[1]  //books
-
-
-
-
-// Object.key
-// Array[index]
-
-// Array[index].Key
-
-
-
-
-
-// var arrOfPerson = [
-//   {
-//     firstName: "firstname",
-//     lastName: "lastName",
-//     age: 21,
-//     canVote= true,
-//     likes = ["movies", "books", "TV"]
-//   },
-//   person2,
-//   person3
-// ]
-
-
-
-
-
-// console.log(person1.firstName, person1.lastName, person1.age)
-
-
-
-// console.log(arrOfPerson[1])
-
-// //  {
-// //   firstName: "firstname",
-// //   d: "lastName",
-// //   age: 21,
-// //   canVote= true,
-// //   likes = ["movies", "books", "TV"]
-// // }
-
-// console.log(arrOfPerson[1].lastName);
-
-
-
-
-
-
-//0
-//Q1
-//a1
-//choose
-//choose right logic for points
-//else if 
-//increase counter
 
 
 
