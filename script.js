@@ -21,6 +21,21 @@ var questions = [
      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
      answer: "parentheses"
    },
+   {
+     title: "JavaScript has a extension of ________.",
+     choices: ["Js", "Java", "JavaScript", "Html"],
+     answer: "Js"
+   },
+   {
+     title: "What is the use of document.getElementById().value in javascript?",
+     choices: ["To take value from a textbox", "To input some value into Javascript", "To take value from any form tool", "None of the above"],
+     answer: "To take value from any form tool"
+   }
+   {
+     title: "My favourite color is _____ .",
+     choices: ["Blue", "Yellow", "Red", "Purple"],
+     answer: "Yellow"
+   }
   ///etc.
 ];
 
@@ -71,19 +86,15 @@ function showQuestion(){
 function checkAnswer(){
   console.log(event.target.innerHTML);
  // console.log(questions[0].answer);
-  if(event.target.innerHTML != questions[0].answer){
+  if(event.target.innerHTML != questions[currentQuestionIndex].answer){
     alert("Wrong");
     currentQuestionIndex++;
     showQuestion();
-    //nextQuestion();
-    // timerElement.textContent = timeLeft - 10;
     timeLeft = timeLeft - 10;
-    // timerInterval = timeLeft - 10;
-  }else if(event.target.innerHTML == questions[0].answer) {
+  }else if(event.target.innerHTML == questions[currentQuestionIndex].answer) {
     alert("right");
     currentQuestionIndex++;
     showQuestion();
-    //nextQuestion();
   }
 }
 
